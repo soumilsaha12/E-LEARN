@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Personal details</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/icon.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <p class="m-0 fw-bold" style="font-size: 25px;"><img src="img/icon.png" alt="" height="50px">Persona<span style="color: #fb873f;">Learn</span></p> 
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+            style="border: none;">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link active">Home</a>
+                <a href="about.html" class="nav-item nav-link">About</a>
+                <a href="courses.html" class="nav-item nav-link">Courses</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                    <div class="dropdown-menu fade-down m-0">
+                        <a href="team.html" class="dropdown-item">Our Team</a>
+                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="nav-item nav-link">Contact</a>
+                <a href="login.html" class="nav-item nav-link"><i class="fa fa-user"></i></a>
+                <a href="#" class="nav-item nav-link">
+                    <div id="google_translate_element"></div>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+        <!-- Header Start -->
+        <div class="container-fluid bg-primary py-5 mb-5 page-header">
+            <div class="container py-5">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10 text-center">
+                        <h1 class="display-3 text-white animated slideInDown">Personal Details</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header End -->
+    
+
+
+    <!-- Login Start -->
+    <div class="container-xxl py-2 mt-4">
+        <div class="container">
+          
+            <div class="row g-4 wow fadeInUp" data-wow-delay="0.5s ">
+                <center>
+                    <form name="submit-to-google-sheet" class="shadow p-4" style="max-width: 550px;">
+                        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                            <h1 class="mb-5 bg-white text-center px-3">Student Information Form</h1>
+                        </div>
+                        <div class="row g-3">
+                            <!-- Name -->
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input name="Name" type="text" class="form-control" id="name" placeholder="Name" required>
+                                    <label for="name">Name</label>
+                                </div>
+                            </div>
+                
+                            <!-- Age -->
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input name="Age" type="number" class="form-control" onwheel="this.blur()" id="age" placeholder="Age" required>
+                                    <label for="age">Age</label>
+                                </div>
+                            </div>
+                
+                            <!-- Gender -->
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <select name="Gender" class="form-control" id="gender" required>
+                                        <option value="" disabled selected>Select Gender</option>
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                    <label for="gender">Gender</label>
+                                </div>
+                            </div>
+                
+                            <!-- Email -->
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input name="Email" type="email" class="form-control" id="email" placeholder="Email Address"  required>
+                                    <label for="email">Email Address</label>
+                                </div>
+                            </div>
+                
+                            <!-- Languages Spoken -->
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input name="Languages Spoken" type="text" class="form-control" id="languages" placeholder="Languages Spoken" required>
+                                    <label for="languages">Languages Spoken</label>
+                                </div>
+                            </div>
+                
+                            <!-- Highest Level of Education -->
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input name="Highest Level of Education" type="text" class="form-control" id="education" placeholder="Highest Level of Education" required>
+                                    <label for="education">Highest Level of Education</label>
+                                </div>
+                            </div>
+                
+                            <!-- Current Course -->
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input name="Current Course" type="text" class="form-control" id="current-course" placeholder="Current Course" required>
+                                    <label for="current-course">Current Course</label>
+                                </div>
+                            </div>
+                
+                            <!-- Learning Goals -->
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <textarea name="Learning Goals" class="form-control" id="learning-goals" placeholder="Learning Goals" style="height: 100px;" required></textarea>
+                                    <label for="learning-goals">Learning Goals</label>
+                                </div>
+                            </div>
+                
+                            <!-- Preferred Learning Style -->
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <select name="Preferred Learning Style" class="form-control" id="learning-style" required>
+                                        <option value="" disabled selected>Select Learning Style</option>
+                                        <option value="visual">Visual</option>
+                                        <option value="auditory">Auditory</option>
+                                        <option value="kinesthetic">Kinesthetic</option>
+                                        <option value="reading-writing">Reading/Writing</option>
+                                    </select>
+                                    <label for="learning-style">Preferred Learning Style</label>
+                                </div>
+                            </div>
+                
+                            <!-- Pacing Preferences -->
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <select name="Pacing Preferences" class="form-control" id="pacing" required>
+                                        <option value="" disabled selected>Select Pacing Preferences</option>
+                                        <option value="self-paced">Self-Paced</option>
+                                        <option value="structured">Structured</option>
+                                        <option value="flexible">Flexible</option>
+                                    </select>
+                                    <label for="pacing">Pacing Preferences</label>
+                                </div>
+                            </div>
+                
+                            <!-- Interested Fields/Subjects -->
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input name="Interested Fields/Subjects" type="text" class="form-control" id="interests" placeholder="Interested Fields/Subjects" required>
+                                    <label for="interests">Interested Fields/Subjects</label>
+                                </div>
+                            </div>
+                
+                            <!-- Career Aspirations -->
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input name="Career Aspirations" type="text" class="form-control" id="career-aspirations" placeholder="Career Aspirations" required>
+                                    <label for="career-aspirations">Career Aspirations</label>
+                                </div>
+                            </div>
+                
+                            <!-- Areas of Difficulty -->
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input name="Areas of Difficulty" type="text" class="form-control" id="difficulties" placeholder="Areas of Difficulty" required>
+                                    <label for="difficulties">Areas of Difficulty</label>
+                                </div>
+                            </div>
+                
+                            <!-- Learning Disabilities or Special Needs -->
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <textarea name="Learning Disabilities or Special Needs (Mention if any)" class="form-control" id="special-needs" placeholder="Learning Disabilities or Special Needs" style="height: 100px;" required></textarea>
+                                    <label for="special-needs">Learning Disabilities or Special Needs (Mention if any)</label>
+                                </div>
+                            </div>
+                
+                            <!-- Study Schedule -->
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <textarea name="Study Schedule" class="form-control" id="study-schedule" placeholder="Study Schedule" style="height: 100px;" required></textarea>
+                                    <label for="study-schedule">Study Schedule</label>
+                                </div>
+                            </div>
+                
+                            <!-- Submit Button -->
+                            <div class="col-12">
+                                <button class="btn text-light w-100 py-3" type="submit">Submit</button>
+                            </div>
+
+                            <div class="col-12 text-center">
+                                <span id="success-message" class="text-success"></span>
+                            </div>
+                        </div>
+                    </form>
+                </center>
+                     
+               
+
+            </div>
+        </div>
+    </div>
+    <!-- Login End -->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-4 col-md-6">
+                    <h4 class="text-white mb-3">Quick Link</h4>
+                    <p><a class="text-light" href="about.html">About Us</a></p>
+                    <p><a class="text-light" href="contact.html">Contact Us</a></p>
+                    <p><a class="text-light" href="">Privacy Policy</a></p>
+                    <p><a class="text-light" href="">Terms & Condition</a></p>
+                    <p><a class="text-light" href="">FAQs & Help</a></p>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h4 class="text-white mb-3">Contact</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>SRM University, Chennai</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91 9321307206</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>PersonaLearn@gmail.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <h4 class="text-white mb-3">Subscribe to our Newsletter</h4>
+                    <p>Subscribe now and join our growing community of learners committed to lifelong education! </p>
+                    <div class="position-relative mx-auto" style="max-width: 400px;">
+                        <form action="#">
+                            <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="email"
+                                placeholder="Your email" required>
+                            <button type="submit"
+                                class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2"><a
+                                    href="mailto:keertidvcorai@gmail.com">Subscribe</a></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="index.html">Persona Learn</a>, All Right Reserved.
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+
+    
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzrkdlTf83gBsTVkF7pmEh37XxHX2SidjXHjKmMESMP27RqV3E0GkAFiTWV-9-dAxvj/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const success = document.getElementById('success-message')
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                success.innerHTML = "Data Added Succesfully";
+
+                setTimeout(function(){
+                    success.innerHTML = "";
+                },5000)
+                setTimeout(function() {
+                    success.innerHTML = "";
+                    // Redirect to the home page after 10 seconds (10000 milliseconds)
+                    window.location.href='index.html'; // Replace 'home.html' with your home page URL
+                }, 6000);
+                form.reset();
+                
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
