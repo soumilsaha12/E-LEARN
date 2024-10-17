@@ -1,46 +1,44 @@
 <?php
-$server= "localhost";
-$user= "root";
-$password="";
-$db="login_db";
 
-$conn = mysqli_connect($server,$user,$password,$db);
-if($conn)
-{
-    ?>
-    <script>
-        alert("Processing");
-    </script>
-    <?php
-}
-else
-{
-    ?>
-    <script>
-        alert("Registration not successfull");
-    </script>
-    <?php
+$servername = "localhost";  
+$username = "root";         
+$password = "";             
+$dbname = "persona_learn";  
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
 }
 
-          if(isset($_POST['submit']))
-          {
-            $username = mysqli_real_escape_string($conn, $_POST['name']);
-            $email = mysqli_real_escape_string($conn, $_POST['email']);
-            $password = $_POST['password'];
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $username = mysqli_real_escape_string($conn, $_POST['username']);
+    $email = mysqli_real_escape_string($conn, $_POST['email']);
+    $password = mysqli_real_escape_string($conn, $_POST['password']);
 
-            $emailquery = " select * from users where email ='$email'";
-            $query = mysqli_query($conn,$emailquery);
+    if (empty($username) || empty($email) || empty($password)) {
+        echo "All fields are required.";
+    } else {
+        $sql = "SELECT * FROM users WHERE email='$email'";
+        $result = $conn->query($sql);
 
-            $emailcount = mysqli_num_rows($query);
+        if ($result->num_rows > 0) {
+            echo "Email is already registered.";
+        } else {
+            $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-            if($emailcount>0)
-            {
-                ?>
-                <script>
-                    alert("E-mail already exists");
-                    window.location.href="login.html"
-                </script>
-                <?php
+            $sql = "INSERT INTO users (username, email, password) VALUES ('$username', '$email', '$hashed_password')";
+
+            if ($conn->query($sql) === TRUE) {
+                echo "Signup successful!";
+                header("Location: login.html"); 
+                exit();
+            } else {
+                echo "Error: " . $sql . "<br>" . $conn->error;
             }
-            
         }
+    }
+}
+
+$conn->close();
+?>
