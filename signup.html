@@ -105,7 +105,7 @@
             <div class="row g-4 wow fadeInUp" data-wow-delay="0.5s ">
 
                 <center>
-                    <form class="shadow p-4" style="max-width: 550px;">
+                    <form action="signup.php" method="POST" novalidate class="shadow p-4" style="max-width: 550px;">
                         <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                             <h1 class="mb-5 bg-white text-center px-3">Signup</h1>
 
@@ -113,25 +113,25 @@
                         <div class="row g-3">
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="username" placeholder="Username">
+                                    <input type="text" name="username" class="form-control" id="username" placeholder="Username">
                                     <label for="Username">Username</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <input type="email" class="form-control" id="email" placeholder="Email Address">
+                                    <input type="email" name="email" class="form-control" id="email" placeholder="Email Address">
                                     <label for="email">Email Address</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <input type="password" class="form-control" id="password" placeholder="Password">
+                                    <input type="password" name="password" class="form-control" id="password" placeholder="Password">
                                     <label for="password">Password</label>
                                 </div>
                             </div>
 
                             <div class="col-12">
-                                <a href="persdetail.html" class="btn text-light w-100 py-3" role="button">Signup</a>
+                                <a class="btn text-light w-100 py-3" name="submit" type="submit" role="button">Signup</a>
                             </div>                            
 
                             <div class="col-12 text-center">
